@@ -8,12 +8,22 @@ body {
     color: #333333;
 }
 
-.content {
+.pagina {
     width: 944px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 0 40px 0;
     box-sizing: border-box;
+}
+
+/* Menu */
+.menu {
+    margin-bottom: 40px;
+}
+
+.menu a {
+    margin-right: 20px;
+    color: #333333;
 }
 
 /* Titels */
@@ -44,7 +54,7 @@ p {
     line-height: 32px;
 }
 
-/* Lijsten margin en padding */
+/* Lijsten */
 ul,
 ol {
     margin: 0 0 40px 0;
@@ -52,19 +62,19 @@ ol {
 }
 
 .ingredienten li {
-    margin-bottom: 10px;        /* Item margins */
+    margin-bottom: 10px;
 }
 
 .ingredienten li:last-child {
-    margin-bottom: 0;           /* Laatse item margin */
+    margin-bottom: 0;
 }
 
 .bereiding li {
-    margin-bottom: 20px;        /* Lijst in het algemeen 20px margin */
+    margin-bottom: 20px;
 }
 
 .bereiding li:last-child {
-    margin-bottom: 0;           /* Margin voor de laatse item van de list */
+    margin-bottom: 0;
 }
 
 /* Afbeelding */
@@ -76,9 +86,14 @@ img {
     margin-bottom: 40px;
 }
 
-/* Tip achtergrond */
+/* Tip */
 .tip {
     padding: 25px;
     background-color: #def6ed;
     border-radius: 4px;
+}
+
+/* Extra pagina's (voor- en nagerecht) */
+.pagina-extra .tip {
+    margin-top: 40px;
 }
