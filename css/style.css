@@ -1,9 +1,11 @@
-body {
+.content {
+    width: 600px;
+    margin: 0 auto;
     background-color: #2596be;    /* Achtergrond kleur */
     border: 2px;                    /* Border dikte */
     border-color:black;           /* Border kleur */
     border-style: solid;            /* Border type */
-    padding: 3px                    /* Hoeveel ruimte tussen de border en body */
+    padding: 10px                   /* Hoeveel ruimte tussen de border en body */
 }
 
 p {
