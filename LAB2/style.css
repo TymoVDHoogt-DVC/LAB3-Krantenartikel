@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.content {
+    width: 944px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0 40px 0;
+    box-sizing: border-box;
+}
+
+/* Titels */
+h1 {
+    margin: 0 0 40px 0;
+    padding-bottom: 20px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    border-bottom: 1px solid #666666;
+}
+
+h2 {
+    margin: 0 0 20px 0;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+/* Tekst */
+p {
+    margin: 0;
+}
+
+.intro {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+/* Lijsten margin en padding */
+ul,
+ol {
+    margin: 0 0 40px 0;
+    padding-left: 40px;
+}
+
+.ingredienten li {
+    margin-bottom: 10px;        /* Item margins */
+}
+
+.ingredienten li:last-child {
+    margin-bottom: 0;           /* Laatse item margin */
+}
+
+.bereiding li {
+    margin-bottom: 20px;        /* Lijst in het algemeen 20px margin */
+}
+
+.bereiding li:last-child {
+    margin-bottom: 0;           /* Margin voor de laatse item van de list */
+}
+
+/* Afbeelding */
+img {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+/* Tip achtergrond */
+.tip {
+    padding: 25px;
+    background-color: #def6ed;
+    border-radius: 4px;
+}
