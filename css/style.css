@@ -1,27 +1,27 @@
 body {
-    background-color: #2596be;
-    border: 2px;
-    border-color:black;
-    border-style: solid;
-    padding: 3px
+    background-color: #2596be;    /* Achtergrond kleur */
+    border: 2px;                    /* Border dikte */
+    border-color:black;           /* Border kleur */
+    border-style: solid;            /* Border type */
+    padding: 3px                    /* Hoeveel ruimte tussen de border en body */
 }
 
 p {
-    display: flow-root;
-    margin-bottom: 20px;
+    display: flow-root;             /* Functie om alles in de box te houden met float gebruikt */
+    margin-bottom: 20px;            /* De margin hiervan */
 }
 
 p img {
-    max-width: 40%;
-    height: auto;
+    max-width: 40%;                 /* Maximale */
+    height: auto;                   /* Automatiche hoogte zetten */
 }
 
 .float-links {
-    float:left;
-    margin-right: 10px;
+    float:left;                     /* Afbeelding links, tekst aan de rechterkant en omheen */
+    margin-right: 10px;             /* Margin tussen afbeelding en tekst */
 }
 
 .float-rechts {
-    float:right;
-    margin-left: 10px;
+    float:right;                    /* Afbeelding rechts, tekst aan de linkerkant en omheen */
+    margin-left: 10px;              /* Margin tussen afbeelding en tekst */
 }
