@@ -1,3 +1,4 @@
+/* Basisinstellingen voor de hele pagina: lettertype, grootte en kleur */
 body {
     margin: 0;
     padding: 20px 0;
@@ -16,10 +17,12 @@ h3 {
     line-height: 28px;
 }
 
+/* Ruimte onder elke alinea */
 p {
     margin: 0 0 15px 0;
 }
 
+/* Haalt de standaard bolletjes, nummers en inspringing van alle lijsten weg */
 ul,
 ol {
     margin: 0;
@@ -28,6 +31,8 @@ ol {
 }
 
 /* Header en menu */
+
+/* Header en footer: 1000px breed en gecentreerd, net als main */
 header,
 footer {
     width: 1000px;
@@ -36,21 +41,25 @@ footer {
     box-sizing: border-box;
 }
 
+/* Kader om het menu met ruimte eronder */
 header {
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid #000000;
 }
 
+/* Zet de menu-items naast elkaar met 10px ertussen */
 nav ul {
     display: flex;
     gap: 10px;
 }
 
+/* Duwt het laatste item (Game Picker) helemaal naar rechts */
 nav li.rechts {
     margin-left: auto;
 }
 
+/* Elke menulink als vakje met rand, zonder onderstreping */
 nav a {
     display: block;
     padding: 12px 20px;
@@ -59,16 +68,19 @@ nav a {
     text-decoration: none;
 }
 
+/* Lichtgrijze achtergrond als je met de muis over een menulink gaat */
 nav a:hover {
     background-color: #eeeeee;
 }
 
+/* Markeert de pagina waar je op zit: vetgedrukt met grijze achtergrond */
 nav a.actief {
     font-weight: bold;
     background-color: #dddddd;
 }
 
 /* Main: 1000px breed en gecentreerd */
+/* Het hoofdkader van de pagina: 1000px breed, in het midden, met rand */
 main {
     display: block;
     width: 1000px;
@@ -78,47 +90,56 @@ main {
     border: 1px solid #000000;
 }
 
+/* Elke sectie krijgt ruimte binnenin en een lijn eronder */
 main section {
     padding: 20px;
     border-bottom: 1px solid #000000;
 }
 
+/* De laatste sectie krijgt geen lijn, want main heeft al een rand */
 main section:last-child {
     border-bottom: none;
 }
 
 /* Info: synopsis links, gegevens rechts */
+/* Zet synopsis en gegevens naast elkaar */
 .info {
     display: flex;
     padding: 0;
 }
 
+/* Haalt de padding van de info-sectie weg (synopsis en gegevens hebben die zelf) */
 main section.info {
     padding: 0;
 }
 
+/* Linkerkant: neemt alle overgebleven ruimte in */
 .synopsis {
     flex: 1;
     padding: 20px;
 }
 
+/* Rechterkant: vaste breedte van 250px met een lijn links */
 .gegevens {
     width: 250px;
     padding: 20px;
     border-left: 1px solid #000000;
 }
 
+/* Ruimte tussen de regels in de gegevenslijst */
 .gegevens li {
     margin-bottom: 15px;
 }
 
 /* Genre-knoppen */
+/* Zet de genre-knoppen naast elkaar, met ruimte erboven */
 .tags {
     display: flex;
     gap: 10px;
     margin-top: 30px;
 }
 
+/* Uiterlijk van de knoppen: wit met dunne rand en eigen lettertype */
 .tags button {
     padding: 4px 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -128,16 +149,19 @@ main section.info {
     cursor: pointer;
 }
 
+/* Knop wordt lichtgrijs als je erover gaat met de muis */
 .tags button:hover {
     background-color: #eeeeee;
 }
 
 /* Screenshots */
+/* Zet de screenshots naast elkaar met 10px ertussen */
 .screenshots ul {
     display: flex;
     gap: 10px;
 }
 
+/* Alle screenshots even groot (200x150), bijgesneden zodat ze niet uitrekken */
 .screenshots img {
     display: block;
     width: 200px;
@@ -147,6 +171,7 @@ main section.info {
 }
 
 /* Systeemeisen */
+/* Ruimte tussen de regels van de systeemeisen */
 .eisen li {
     margin-bottom: 12px;
 }
