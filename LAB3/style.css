@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+/* Alle kopjes 23px */
+h1,
+h2,
+h3 {
+    margin: 0 0 20px 0;
+    font-size: 23px;
+    line-height: 28px;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Header en menu */
+header,
+footer {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+nav li.rechts {
+    margin-left: auto;
+}
+
+nav a {
+    display: block;
+    padding: 12px 20px;
+    border: 1px solid #000000;
+    color: #000000;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #eeeeee;
+}
+
+nav a.actief {
+    font-weight: bold;
+    background-color: #dddddd;
+}
+
+/* Main: 1000px breed en gecentreerd */
+main {
+    display: block;
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+}
+
+main section {
+    padding: 20px;
+    border-bottom: 1px solid #000000;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+/* Info: synopsis links, gegevens rechts */
+.info {
+    display: flex;
+    padding: 0;
+}
+
+main section.info {
+    padding: 0;
+}
+
+.synopsis {
+    flex: 1;
+    padding: 20px;
+}
+
+.gegevens {
+    width: 250px;
+    padding: 20px;
+    border-left: 1px solid #000000;
+}
+
+.gegevens li {
+    margin-bottom: 15px;
+}
+
+/* Genre-knoppen */
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.tags button {
+    padding: 4px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.tags button:hover {
+    background-color: #eeeeee;
+}
+
+/* Screenshots */
+.screenshots ul {
+    display: flex;
+    gap: 10px;
+}
+
+.screenshots img {
+    display: block;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #000000;
+}
+
+/* Systeemeisen */
+.eisen li {
+    margin-bottom: 12px;
+}
+
+/* Recensies: serif */
+.recensies li {
+    margin-bottom: 20px;
+}
+
+.recensies p {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
