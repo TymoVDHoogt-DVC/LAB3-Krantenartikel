@@ -14,8 +14,21 @@ function buttonCreate(nummer) {
     button.textContent = nummer
     button.classList.add("groen")
 
+    let aantalKlikken = 0
+
     button.addEventListener("click", function() {
-        button.classList.replace("groen", "rood")
+        aantalKlikken++
+        if (aantalKlikken == 1) {
+            button.classList.replace("groen", "rood")
+        } else if (aantalKlikken == 2) {
+            button.classList.replace("rood", "paars")
+        } else if (aantalKlikken == 3) {
+            button.classList.replace("paars", "blauw")
+        } else if (aantalKlikken == 4) {
+            button.classList.replace("blauw", "zwart")
+        } else if (aantalKlikken == 5) {
+            button.remove()
+        }
     })
 
     return button
