@@ -6,28 +6,27 @@ container.appendChild(panel)
 
 panel.classList.add("paneel")
 
+let kleuren = ["groen", "rood", "paars", "blauw", "zwart"]
+
 let aantalButtons = 30
 
 function buttonCreate(nummer) {
     let button = document.createElement("button")
 
     button.textContent = nummer
-    button.classList.add("groen")
+    button.classList.add(kleuren[0])
 
     let aantalKlikken = 0
 
     button.addEventListener("click", function() {
         aantalKlikken++
-        if (aantalKlikken == 1) {
-            button.classList.replace("groen", "rood")
-        } else if (aantalKlikken == 2) {
-            button.classList.replace("rood", "paars")
-        } else if (aantalKlikken == 3) {
-            button.classList.replace("paars", "blauw")
-        } else if (aantalKlikken == 4) {
-            button.classList.replace("blauw", "zwart")
-        } else if (aantalKlikken == 5) {
+        if (aantalKlikken === kleuren.length) {
             button.remove()
+        } else {
+            button.classList.replace(
+                kleuren[aantalKlikken - 1],
+                kleuren[aantalKlikken]
+            )
         }
     })
 
