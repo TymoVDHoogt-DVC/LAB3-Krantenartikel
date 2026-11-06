@@ -6,19 +6,21 @@ container.appendChild(panel)
 
 panel.classList.add("paneel")
 
-function buttonCreate(kleur, klasse, tekst) {
+let aantalButtons = 30
+
+function buttonCreate(nummer) {
     let button = document.createElement("button")
 
-    button.textContent = tekst
-    button.classList.add(klasse)
+    button.textContent = nummer
+    button.classList.add("groen")
 
     button.addEventListener("click", function() {
-        document.body.style.backgroundColor = kleur
+        button.classList.replace("groen", "rood")
     })
 
     return button
 }
 
-panel.appendChild(buttonCreate("green", "groen", "Groen"))
-panel.appendChild(buttonCreate("red", "rood", "Rood"))
-panel.appendChild(buttonCreate("blue", "blauw", "Blauw"))
+for (let i = 1; i <= aantalButtons; i++) {
+    panel.appendChild(buttonCreate(i))
+}
