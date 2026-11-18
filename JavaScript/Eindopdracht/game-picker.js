@@ -218,7 +218,7 @@ function toonGames() {
         let priceElement = document.createElement("div")
         priceElement.textContent = games[i].price
         gameElement.appendChild(priceElement)
-        // genere
+        // genre
         let genreElement = document.createElement("div")
         genreElement.textContent = games[i].genre
         gameElement.appendChild(genreElement)
