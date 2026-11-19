@@ -192,3 +192,54 @@ footer {
     text-align: center;
     font-size: 14px;
 }
+
+#winkelmandje {
+    display: none;
+}
+
+/* Gamepicker */
+#totaaloverzicht,
+#winkelmandje {
+    padding: 20px;
+}
+
+/* Titels */
+#totaaloverzicht h2,
+#winkelmandje h2 {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+#totaaloverzicht input,
+#totaaloverzicht select,
+#totaaloverzicht button,
+#winkelmandje button {
+    padding: 10px;
+    font-size: 14px;
+    background: white;
+    border: 1px solid black;
+    margin-right: 8px;
+}
+
+#winkelmandje button {
+    padding: 4px 8px;
+    margin: 0 8px;
+    font-size: 12px;
+}
+
+#totaaloverzicht > button:last-child {
+    margin-top: 12px;
+}
+
+#totaaloverzicht > div {
+    border: 1px solid black;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.gamekaart {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
