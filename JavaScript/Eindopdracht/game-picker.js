@@ -223,42 +223,15 @@ function toonGames() {
     let genreSelect = document.createElement("select")
     totaaloverzicht.appendChild(genreSelect)
     // Opties
-    // Alle Genres
-    let allegenres = document.createElement("option")
-    allegenres.textContent = "Alle Genres"
-    genreSelect.appendChild(allegenres)
-    // FPS
-    let fps = document.createElement("option")
-    fps.textContent = "FPS"
-    genreSelect.appendChild(fps)
-    // MOBA
-    let moba = document.createElement("option")
-    moba.textContent = "MOBA"
-    genreSelect.appendChild(moba)
-    // Action
-    let action = document.createElement("option")
-    action.textContent = "Action"
-    genreSelect.appendChild(action)
-    // RPG
-    let rpg = document.createElement("option")
-    rpg.textContent = "RPG"
-    genreSelect.appendChild(rpg)
-    // Simulation
-    let simulation = document.createElement("option")
-    simulation.textContent = "Simulation"
-    genreSelect.appendChild(simulation)
-    // Looter-Shooter
-    let lootershooter = document.createElement("option")
-    lootershooter.textContent = "Looter-shooter"
-    genreSelect.appendChild(lootershooter)
-    // Sport
-    let sport = document.createElement("option")
-    sport.textContent = "Sport"
-    genreSelect.appendChild(sport)
-    // Sandbox
-    let sandbox = document.createElement("option")
-    sandbox.textContent = "Sandbox"
-    genreSelect.appendChild(sandbox)
+
+    let genres = ["Alle Genres", "FPS", "MOBA", "Action", "RPG", "Simulation", "Looter-shooter", "Sport", "Sandbox"]
+
+    for (let i = 0; i < genres.length; i++) {
+        let genreOptie = document.createElement("option")
+        genreOptie.textContent = genres[i]
+        genreSelect.appendChild(genreOptie)
+    }
+
     // eventListener (Genre)
     genreSelect.addEventListener("change", function() {
         let gekozenGenre = genreSelect.value
@@ -325,28 +298,27 @@ function filterRating(maxRating, gamesContainer) {
     toonGameLijst(gefilterdeGames, gamesContainer)
 }
 
+function maakElement(type, tekst, ouder) {
+    let element = document.createElement(type)
+    element.textContent = tekst
+    ouder.appendChild(element)
+    return element
+}
+
 function toonGameLijst(gameLijst, gamesContainer) {
     // gameslijst
     for (let i = 0; i < gameLijst.length; i++) {
         console.log(gameLijst[i].title)
-        // titel
+
         let gameElement = document.createElement("div")
         gameElement.classList.add("gamekaart")
-        gameElement.textContent = gameLijst[i].title
         gamesContainer.appendChild(gameElement)
-        // prijs
-        let priceElement = document.createElement("div")
-        priceElement.textContent = gameLijst[i].price
-        gameElement.appendChild(priceElement)
-        // genre
-        let genreElement = document.createElement("div")
-        genreElement.textContent = gameLijst[i].genre
-        gameElement.appendChild(genreElement)
-        // rating
-        let ratingElement = document.createElement("div")
-        ratingElement.textContent = gameLijst[i].rating
-        gameElement.appendChild(ratingElement)
-        // winkelmandje
+
+        gameElement.textContent = gameLijst[i].title
+        maakElement("div", gameLijst[i].price, gameElement)
+        maakElement("div", gameLijst[i].genre, gameElement)
+        maakElement("div", gameLijst[i].rating, gameElement)
+
         let winkelmandjeknop = document.createElement("button")
         winkelmandjeknop.textContent = "Voeg toe aan winkelmandje"
         gameElement.appendChild(winkelmandjeknop)
@@ -373,9 +345,7 @@ function toonWinkelmandje() {
         verwijderKnop.textContent = "Verwijder"
         gamewinkelElement.appendChild(verwijderKnop)
         // prijs
-        let prijsElement = document.createElement("div")
-        prijsElement.textContent = winkelmandjeGames[i].price
-        gamewinkelElement.appendChild(prijsElement)
+        maakElement("div", winkelmandjeGames[i].price, gamewinkelElement)
         // verwijder
         verwijderKnop.addEventListener("click", function() {
         winkelmandjeGames.splice(i, 1)
@@ -393,6 +363,6 @@ function berekenPrijs() {
     for (let i = 0; i < winkelmandjeGames.length; i++) {
         totaalbedrag = totaalbedrag + winkelmandjeGames[i].price
 }
-return totaalbedrag
+return totaalbedrag.toFixed(2)
 }
 toonGames()
