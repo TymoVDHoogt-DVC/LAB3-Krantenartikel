@@ -301,7 +301,7 @@ function filterRating(maxRating, gamesContainer) {
 function maakElement(type, tekst, ouder) {
     let element = document.createElement(type)
     element.textContent = tekst
-    ouder.appendChild(element)
+    ouder.appendChild(element) 
     return element
 }
 
